@@ -193,13 +193,14 @@
           </svg>
         </div>
 
-        <!-- FULL SECTION: Blurred Hero Background + Content -->
+        <!-- FULL SECTION: Hero Background + Content -->
         <div class="relative w-full min-h-[900px] flex items-center justify-center">
 
-          <!-- BLURRED BACKGROUND IMAGE -->
-          <div class="absolute inset-0 z-0" style="background-image: url('hero-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; filter: blur(2px) brightness(0.85); transform: scale(1.06);"></div>
-          <!-- Vignette overlay -->
-          <div class="absolute inset-0 z-[1]" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.42) 100%);"></div>
+          <!-- CRISP ARCHITECTURAL HERO BACKGROUND IMAGE -->
+          <div class="absolute inset-0 z-0" style="background-image: url('shreevari_hero_bg.png'); background-size: cover; background-position: center right; background-repeat: no-repeat;"></div>
+          <!-- Architectural darkening and gradient overlay for optimal readability & contrast -->
+          <div class="absolute inset-0 z-[1]" style="background: linear-gradient(90deg, rgba(27,26,23,0.88) 0%, rgba(27,26,23,0.72) 48%, rgba(27,26,23,0.45) 100%);"></div>
+          <div class="absolute inset-0 z-[1]" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.65) 100%);"></div>
 
           <!-- TWO-COLUMN CONTENT -->
           <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 xl:gap-16 items-start lg:items-center px-5 sm:px-8 py-16 lg:py-20">
@@ -322,26 +323,30 @@
 
                   <!-- Submit -->
                   <div class="pt-1">
-                    <button class="w-full text-white font-bold text-[11px] tracking-[0.2em] py-4 px-4 transition-all rounded-none flex items-center justify-center cursor-pointer uppercase" id="heroSubmitBtn" type="submit" style="background:#C5A059;" onmouseover="this.style.background='#1B1A17'" onmouseout="this.style.background='#C5A059'">
+                    <button class="w-full text-white font-bold text-[11px] tracking-[0.2em] py-4 px-4 transition-all rounded-none flex items-center justify-center cursor-pointer uppercase shadow-md" id="heroSubmitBtn" type="submit" style="background:#C5A059;" onmouseover="this.style.background='#1B1A17'" onmouseout="this.style.background='#C5A059'">
                       <span>GET MY FREE ESTIMATE &#8212; EMAIL &amp; WHATSAPP &#8594;</span>
                     </button>
-                    <div class="hidden mt-3 p-3 border" id="heroFormFeedback" style="background:#F0FBF4; border-color:#22c55e;">
-                      <div class="flex items-start gap-2">
-                        <span class="material-symbols-outlined text-green-600 text-lg">check_circle</span>
+                    <div class="hidden mt-3 p-3.5 border shadow-sm" id="heroFormFeedback" style="background:#F0FBF4; border-color:#22c55e;">
+                      <div class="flex items-start gap-2.5">
+                        <span class="material-symbols-outlined text-green-600 text-xl shrink-0 mt-0.5">check_circle</span>
                         <div>
-                          <p class="text-xs text-black font-bold">Project Brief Dispatched!</p>
-                          <p class="text-[11px] text-gray-600 mt-0.5">Sent to <strong>shreevaribuildcon@yahoo.com</strong> &amp; opening on WhatsApp.</p>
+                          <p class="text-xs text-black font-bold">Estimate Dispatched &amp; Redirecting to WhatsApp!</p>
+                          <p class="text-[11px] text-gray-700 mt-0.5">Dispatched to <strong>shreevaribuildcon@yahoo.com</strong>. Launching WhatsApp chat with our engineering desk (+91 91489 36149)...</p>
                         </div>
                       </div>
-                      <div class="mt-2.5 pt-2 border-t border-green-100">
-                        <a class="inline-flex items-center justify-center gap-2 w-full text-white text-[10px] tracking-widest py-2.5 px-3 font-bold text-center transition-colors" style="background:#25D366;" href="#" id="heroWhatsappDirectBtn" rel="noopener noreferrer" target="_blank">
+                      <div class="mt-3 pt-2.5 border-t border-green-200 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <a class="inline-flex items-center justify-center gap-1.5 w-full text-white text-[10px] tracking-wider py-2.5 px-3 font-bold text-center transition-colors shadow-sm" style="background:#25D366;" href="#" id="heroWhatsappDirectBtn" rel="noopener noreferrer" target="_blank">
                           <span class="material-symbols-outlined text-[16px]">chat</span>
-                          <span>OPEN ON WHATSAPP &#8212; +91 91489 36149</span>
+                          <span>OPEN ON WHATSAPP</span>
+                        </a>
+                        <a class="inline-flex items-center justify-center gap-1.5 w-full text-[#1B1A17] text-[10px] tracking-wider py-2.5 px-3 font-bold text-center transition-colors border border-gray-300 bg-white hover:bg-gray-50 shadow-sm" href="mailto:shreevaribuildcon@yahoo.com" id="heroMailDirectBtn">
+                          <span class="material-symbols-outlined text-[16px]">mail</span>
+                          <span>EMAIL APP FALLBACK</span>
                         </a>
                       </div>
                     </div>
                     <p class="text-[10px] text-gray-500 mt-2.5 text-center leading-tight">
-                      &#128274; Zero spam. Strictly confidential. Direct review by our engineering directors.
+                      &#128274; Zero spam. Strictly confidential. Dispatched to shreevaribuildcon@yahoo.com and WhatsApp +91 91489 36149.
                     </p>
                   </div>
                 </form>
@@ -959,29 +964,33 @@
                 </button>
 
                 <!-- Feedback & Direct WhatsApp Link Container -->
-                <div class="hidden mt-4 p-4 bg-[#ECE8E0] border border-[#55573A]" id="formFeedback">
+                <div class="hidden mt-4 p-4 bg-[#F0FBF4] border border-[#22c55e] shadow-sm" id="formFeedback">
                   <div class="flex items-start gap-2.5">
-                    <span class="material-symbols-outlined text-[#55573A] text-xl mt-0.5">check_circle</span>
+                    <span class="material-symbols-outlined text-green-600 text-xl mt-0.5 shrink-0">check_circle</span>
                     <div>
-                      <p class="font-body-md text-sm text-[#1B1A17] font-semibold">
-                        Inquiry Recorded &amp; Sent to Email Desk
+                      <p class="font-body-md text-sm text-[#1B1A17] font-bold">
+                        Inquiry Recorded &amp; Redirecting to WhatsApp!
                       </p>
                       <p class="font-body-sm text-xs text-[#5E5951] mt-0.5" id="feedbackEmailNotice">
-                        Dispatched to <strong>shreevaribuildcon@yahoo.com</strong>.
+                        Dispatched to <strong>shreevaribuildcon@yahoo.com</strong>. Launching WhatsApp with our engineering desk (+91 91489 36149)...
                       </p>
                     </div>
                   </div>
                   
-                  <div class="mt-3.5 pt-3 border-t border-[#DDD7CB]">
-                    <a class="inline-flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-label-uppercase text-[11px] tracking-widest py-3 px-4 transition-colors font-medium text-center" href="#" id="whatsappDirectBtn" rel="noopener noreferrer" target="_blank">
+                  <div class="mt-3.5 pt-3 border-t border-green-200 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <a class="inline-flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-label-uppercase text-[11px] tracking-widest py-3 px-4 transition-colors font-medium text-center shadow-sm" href="#" id="whatsappDirectBtn" rel="noopener noreferrer" target="_blank">
                       <span class="material-symbols-outlined text-[18px]">chat</span>
-                      <span>CONTINUE ON WHATSAPP (+91 91489 36149)</span>
+                      <span>CONTINUE ON WHATSAPP</span>
+                    </a>
+                    <a class="inline-flex items-center justify-center gap-2 w-full bg-white hover:bg-gray-50 text-[#1B1A17] border border-[#DDD7CB] font-label-uppercase text-[11px] tracking-widest py-3 px-4 transition-colors font-medium text-center shadow-sm" href="mailto:shreevaribuildcon@yahoo.com" id="mailDirectBtn">
+                      <span class="material-symbols-outlined text-[18px]">mail</span>
+                      <span>EMAIL APP FALLBACK</span>
                     </a>
                   </div>
                 </div>
 
                 <p class="font-body-sm text-[11px] text-[#5E5951] mt-2.5 leading-tight">
-                  Your brief is routed to our desk email (<span class="underline">shreevaribuildcon@yahoo.com</span>) and opens in WhatsApp for immediate response.
+                  Your brief is routed to our desk email (<span class="underline">shreevaribuildcon@yahoo.com</span>) and immediately redirected to WhatsApp (+91 91489 36149).
                 </p>
               </div>
             </form>
@@ -1047,15 +1056,144 @@
           </div>
         </div>
 
-        <!-- Desaturated Architectural Map Strip -->
-        <div class="w-full h-[280px] relative bg-[#ECE8E0] overflow-hidden">
-          <div class="w-full h-full bg-cover bg-center filter grayscale contrast-[1.1] opacity-75" data-location="Tumakuru, Karnataka, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyMjaZSfiW7nguhovxnB0o2Yw9nIDFKrZAZzxtpOJt_dLR_cIbGMbynywAtXQfTLFuFfo-xscM36ugeUm28Fd8tkvpy7hCTzjs6K1DCmZ24wmaQF1mIrg3puOrsbJdRB-lddvzblVLxUdUKVvj7OYQCHTayKOhMWoCUy7EExyyqtHDVZmxmILSHR5wxmmUM1pNU2dQ0cpnYTU954IZ8ABOIeV7AU9YUD4jJTgb3T66');"></div>
-          <div class="absolute inset-0 bg-[#55573A]/10 pointer-events-none"></div>
-          <div class="absolute top-6 left-6 lg:left-margin bg-[#F7F4EE] border border-[#DDD7CB] px-4 py-3 flex items-center gap-4">
-            <div class="w-3 h-3 bg-[#55573A]"></div>
-            <div>
-              <p class="font-label-uppercase text-[10px] tracking-widest text-[#1B1A17] font-semibold">SHREEVARI REGIONAL REACH</p>
-              <p class="font-body-sm text-[12px] text-[#5E5951]">Jayanagar, Tumakuru • Bengaluru Projects Hub</p>
+        <!-- ========================================== -->
+        <!-- PROFESSIONAL LOCATION SHOWCASE & MAP       -->
+        <!-- ========================================== -->
+        <div class="w-full relative border-t border-[#DDD7CB] bg-[#F2EDE8]" id="location-hub">
+          
+          <!-- Top Architectural Meta Bar -->
+          <div class="px-6 lg:px-14 py-4 bg-[#1B1A17] text-white flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#DDD7CB]/30">
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 bg-[#C5A059]"></span>
+              <div>
+                <span class="font-label-uppercase text-[10px] tracking-[0.25em] text-[#C5A059] uppercase block font-semibold">REGISTERED ATELIER &amp; STUDIO</span>
+                <p class="font-headline-sm text-[16px] text-white">Shri Lakshmi Venkateshwara Road, Jayanagar, Tumakuru 572 102, Karnataka</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-gray-300">
+              <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[#C5A059] text-[16px]">pin_drop</span> 13.3392° N, 77.1017° E</span>
+              <span class="hidden sm:inline text-gray-600">|</span>
+              <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[#C5A059] text-[16px]">commute</span> NH 48 Expressway &#8226; 5 Mins</span>
+              <span class="hidden sm:inline text-gray-600">|</span>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Shri+Lakshmi+Venkateshwara+Road,+Jayanagar,+Tumakuru+572102,+Karnataka" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[#C5A059] hover:text-white transition-colors font-bold uppercase tracking-wider text-[11px]">
+                <span>GET DIRECTIONS</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Main Map Stage with Interactive Google Map + Image on Map + Scannable QR Code -->
+          <div class="relative w-full min-h-[580px] lg:min-h-[640px] overflow-hidden">
+            
+            <!-- Live Interactive Google Map Embed -->
+            <iframe 
+              class="w-full h-full min-h-[580px] lg:min-h-[640px] border-0 filter contrast-[1.05]" 
+              src="https://maps.google.com/maps?q=Shri+Lakshmi+Venkateshwara+Road,+Jayanagar,+Tumakuru+572102,+Karnataka&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              allowfullscreen="" 
+              title="Shreevari Civil &amp; Interiors Office Location Map">
+            </iframe>
+
+            <!-- Ambient edge shadow -->
+            <div class="absolute inset-0 pointer-events-none shadow-[inset_0_0_40px_rgba(27,26,23,0.18)]"></div>
+
+            <!-- FLOATING CARD 1: Architectural Studio Facade Image on the Map -->
+            <div class="absolute top-5 left-5 sm:left-8 z-20 w-[calc(100%-2.5rem)] sm:w-[320px] md:w-[360px] bg-white/95 backdrop-blur-md border border-[#DDD7CB] shadow-[0_20px_50px_rgba(27,26,23,0.25)] overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+              <div class="relative h-44 sm:h-48 w-full overflow-hidden bg-[#1B1A17]">
+                <img 
+                  src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80" 
+                  alt="Shreevari Registered Civil &amp; PEB Atelier, Tumakuru" 
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1B1A17] via-[#1B1A17]/30 to-transparent"></div>
+                <div class="absolute top-3 left-3 bg-[#1B1A17]/90 backdrop-blur-sm text-white text-[9px] font-bold tracking-[0.2em] px-2.5 py-1 uppercase border border-[#C5A059]/50 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-ping"></span>
+                  <span>ATELIER &amp; STUDIO</span>
+                </div>
+                <div class="absolute bottom-2.5 left-3 right-3 text-white">
+                  <p class="font-label-uppercase text-[9px] tracking-widest text-[#C5A059] uppercase">SHREEVARI HEADQUARTERS</p>
+                  <p class="font-headline-sm text-[15px] font-semibold text-white leading-tight">Tumakuru Engineering &amp; PEB Studio</p>
+                </div>
+              </div>
+              
+              <div class="p-4 bg-[#FDF9F3]">
+                <div class="flex items-start gap-2.5 mb-2.5">
+                  <span class="material-symbols-outlined text-[#55573A] text-lg shrink-0 mt-0.5">location_on</span>
+                  <div class="text-[12px] text-[#1B1A17] leading-snug">
+                    <p class="font-bold">Shri Lakshmi Venkateshwara Road, Jayanagar</p>
+                    <p class="text-[#5E5951]">Tumakuru 572 102, Karnataka, India</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 pt-2.5 border-t border-[#DDD7CB] text-[10px] text-[#55573A] font-semibold tracking-wider uppercase">
+                  <div class="flex items-center gap-1">
+                    <span class="w-1 h-1 bg-[#55573A]"></span>
+                    <span>MON–SAT 9AM–7PM</span>
+                  </div>
+                  <div class="flex items-center gap-1 justify-end">
+                    <span class="w-1 h-1 bg-[#55573A]"></span>
+                    <span>DIRECT VISITS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FLOATING CARD 2: Scannable QR Code for Google Maps Directions -->
+            <div class="absolute bottom-5 right-5 sm:right-8 z-20 w-[calc(100%-2.5rem)] sm:w-[280px] md:w-[300px] bg-white/95 backdrop-blur-md border border-[#DDD7CB] shadow-[0_20px_50px_rgba(27,26,23,0.25)] p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
+              <div class="flex items-center justify-between pb-2 mb-3 border-b border-[#DDD7CB]">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[#C5A059] text-[20px]">qr_code_2</span>
+                  <span class="font-label-uppercase text-[10px] tracking-[0.2em] text-[#1B1A17] font-bold uppercase">MAP DIRECTIONS QR</span>
+                </div>
+                <span class="text-[9px] font-bold text-white px-1.5 py-0.5 bg-[#55573A]">SCAN GPS</span>
+              </div>
+
+              <!-- High-Contrast Framed QR Code -->
+              <div class="p-2.5 bg-white border border-[#DDD7CB] flex items-center justify-center relative group shadow-inner">
+                <img 
+                  src="location_directions_qr.png" 
+                  alt="Scan QR Code to Open Google Maps Directions to Shri Lakshmi Venkateshwara Road, Jayanagar, Tumakuru 572 102" 
+                  class="w-40 h-40 sm:w-44 sm:h-44 object-contain transition-transform duration-300 group-hover:scale-105"
+                >
+              </div>
+
+              <div class="mt-3 text-center">
+                <p class="text-[11px] text-[#1B1A17] font-semibold leading-snug">
+                  Scan to Open Google Maps
+                </p>
+                <p class="text-[10px] text-[#5E5951] mt-0.5 leading-tight">
+                  Point phone camera for instant turn-by-turn navigation directly to our Tumakuru atelier.
+                </p>
+              </div>
+
+              <!-- Direct Clickable Button -->
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=Shri+Lakshmi+Venkateshwara+Road,+Jayanagar,+Tumakuru+572102,+Karnataka" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="mt-3 w-full text-white text-[10.5px] tracking-[0.16em] uppercase font-bold py-2.5 px-3 flex items-center justify-center gap-1.5 transition-all shadow-sm" 
+                style="background:#1B1A17;"
+                onmouseover="this.style.background='#55573A'" 
+                onmouseout="this.style.background='#1B1A17'"
+              >
+                <span class="material-symbols-outlined text-[16px] text-[#C5A059]">directions</span>
+                <span>OPEN DIRECTIONS IN MAPS</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Bottom Architectural Coordinates & Corridor Strip -->
+          <div class="px-6 lg:px-14 py-3.5 bg-[#ECE8E0] border-t border-[#DDD7CB] flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-[#5E5951]">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[#55573A] text-[16px]">domain</span>
+              <span><strong>Shreevari Civil &amp; Interiors</strong> &#8226; Shri Lakshmi Venkateshwara Road, Jayanagar, Tumakuru 572 102, Karnataka</span>
+            </div>
+            <div class="flex items-center gap-4 text-[10.5px] uppercase tracking-wider font-medium text-[#7C8458]">
+              <span>Industrial Corridors</span>
+              <span>&#8226;</span>
+              <span>Vasanthanarasapura KIADB</span>
+              <span>&#8226;</span>
+              <span>Peenya Bengaluru</span>
             </div>
           </div>
         </div>
@@ -1127,6 +1265,7 @@
       const submitBtn = document.getElementById('heroSubmitBtn');
       const feedback = document.getElementById('heroFormFeedback');
       const waBtn = document.getElementById('heroWhatsappDirectBtn');
+      const mailBtn = document.getElementById('heroMailDirectBtn');
 
       const name = form.querySelector('input[name="hero_name"]').value.trim();
       const phone = form.querySelector('input[name="hero_phone"]').value.trim();
@@ -1143,14 +1282,14 @@
 
       // 1. Build Formatted WhatsApp Message (+91 91489 36149)
       const waText = `*Project Estimation Request | Shreevari Civil & Interiors*\n\n` +
-        `1️⃣ *Client Name:* ${name}\n` +
-        `2️⃣ *Contact Number:* +91 ${phone}\n` +
-        `3️⃣ *Mail ID:* ${email}\n` +
-        `4️⃣ *City/Location:* ${city}\n` +
-        `5️⃣ *Requirement:* ${requirement}\n` +
-        `6️⃣ *Approx Budget:* ${budget} (${flexibleText})\n` +
-        `7️⃣ *Property & Dimensions:* ${possession} | ${dimensions}\n` +
-        `8️⃣ *Timeline Needed:* ${timeline}\n\n` +
+        `👤 *Client Name:* ${name}\n` +
+        `📞 *Contact Number:* +91 ${phone}\n` +
+        `✉️ *Mail ID:* ${email}\n` +
+        `📍 *City/Location:* ${city}\n` +
+        `🏗️ *Requirement:* ${requirement}\n` +
+        `💰 *Approx Budget:* ${budget} (${flexibleText})\n` +
+        `📐 *Property & Dimensions:* ${possession} | ${dimensions}\n` +
+        `⏱️ *Timeline Needed:* ${timeline}\n\n` +
         `_Dispatched via Hero Instant Estimate Form_`;
 
       const waUrl = `https://wa.me/919148936149?text=${encodeURIComponent(waText)}`;
@@ -1158,12 +1297,20 @@
         waBtn.href = waUrl;
       }
 
+      // Build Mailto URL fallback
+      const mailtoSubject = `New Project Estimate Request: ${name} (${city} - ${requirement})`;
+      const mailtoBody = `Client Name: ${name}\nPhone: +91 ${phone}\nEmail: ${email}\nCity: ${city}\nRequirement: ${requirement}\nBudget: ${budget} (${flexibleText})\nPossession & Dimensions: ${possession} | ${dimensions}\nTimeline: ${timeline}`;
+      const mailtoUrl = `mailto:shreevaribuildcon@yahoo.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(mailtoBody)}`;
+      if (mailBtn) {
+        mailBtn.href = mailtoUrl;
+      }
+
       // UI state
       submitBtn.disabled = true;
       submitBtn.classList.add('opacity-75');
-      submitBtn.innerHTML = '<span>DISPATCHING ESTIMATE TO EMAIL &amp; WHATSAPP...</span>';
+      submitBtn.innerHTML = '<span>DISPATCHING ESTIMATE &amp; REDIRECTING TO WHATSAPP...</span>';
 
-      // 2. Dispatch Email asynchronously via FormSubmit to shreevaribuildcon@yahoo.com
+      // 2. Dispatch Email asynchronously to shreevaribuildcon@yahoo.com with keepalive
       try {
         const formData = new FormData();
         formData.append('1_Client_Name', name);
@@ -1181,30 +1328,21 @@
         fetch('https://formsubmit.co/ajax/shreevaribuildcon@yahoo.com', {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
-          body: formData
+          body: formData,
+          keepalive: true
         }).catch(() => {});
       } catch (err) {
         console.warn('Email dispatch warning:', err);
       }
 
-      // 3. Launch WhatsApp & show on-screen confirmation
-      setTimeout(() => {
-        try {
-          window.open(waUrl, '_blank');
-        } catch (openErr) {
-          console.warn('Popup blocked:', openErr);
-        }
-        
-        submitBtn.classList.remove('opacity-75');
-        submitBtn.innerHTML = '<span>ESTIMATE TRANSMITTED ——✓</span>';
-        feedback.classList.remove('hidden');
-        form.reset();
+      // 3. Show confirmation feedback and redirect to WhatsApp
+      feedback.classList.remove('hidden');
+      submitBtn.innerHTML = '<span>ESTIMATE TRANSMITTED ——✓</span>';
 
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '<span>GET ESTIMATE (EMAIL + WHATSAPP) ——→</span>';
-        }, 6000);
-      }, 800);
+      // Redirect smoothly to WhatsApp
+      setTimeout(() => {
+        window.location.href = waUrl;
+      }, 500);
 
       return false;
     }
@@ -1223,6 +1361,7 @@
       const submitBtn = document.getElementById('submitBtn');
       const feedback = document.getElementById('formFeedback');
       const waBtn = document.getElementById('whatsappDirectBtn');
+      const mailBtn = document.getElementById('mailDirectBtn');
 
       const name = form.querySelector('input[name="name"]').value.trim();
       const email = form.querySelector('input[name="email"]').value.trim();
@@ -1244,10 +1383,18 @@
         waBtn.href = waUrl;
       }
 
+      // Build Mailto URL fallback
+      const mailtoSubject = `New Project Inquiry: ${name} (${discipline})`;
+      const mailtoBody = `Client Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nDiscipline: ${discipline}\nPlot Dimensions & Brief:\n${brief}`;
+      const mailtoUrl = `mailto:shreevaribuildcon@yahoo.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(mailtoBody)}`;
+      if (mailBtn) {
+        mailBtn.href = mailtoUrl;
+      }
+
       // UI state
       submitBtn.disabled = true;
       submitBtn.classList.add('opacity-75');
-      submitBtn.innerHTML = '<span>DISPATCHING BRIEF TO EMAIL &amp; WHATSAPP...</span>';
+      submitBtn.innerHTML = '<span>DISPATCHING BRIEF &amp; REDIRECTING TO WHATSAPP...</span>';
 
       // 2. Dispatch Email asynchronously via FormSubmit AJAX endpoint (to shreevaribuildcon@yahoo.com)
       try {
@@ -1266,7 +1413,8 @@
           headers: {
             'Accept': 'application/json'
           },
-          body: formData
+          body: formData,
+          keepalive: true
         }).catch(() => {
           // Fail gracefully so user still proceeds to WhatsApp even if offline or adblocker blocks AJAX
         });
@@ -1274,24 +1422,14 @@
         console.warn('Email dispatch warning:', err);
       }
 
-      // 3. Open WhatsApp in a new tab & show on-screen confirmation
-      setTimeout(() => {
-        try {
-          window.open(waUrl, '_blank');
-        } catch (openErr) {
-          console.warn('Popup blocked:', openErr);
-        }
-        
-        submitBtn.classList.remove('opacity-75');
-        submitBtn.innerHTML = '<span>INQUIRY TRANSMITTED ——✓</span>';
-        feedback.classList.remove('hidden');
-        form.reset();
+      // 3. Show feedback & redirect to WhatsApp
+      feedback.classList.remove('hidden');
+      submitBtn.innerHTML = '<span>INQUIRY TRANSMITTED ——✓</span>';
 
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '<span>SEND INQUIRY TO EMAIL &amp; WHATSAPP ——→</span>';
-        }, 6000);
-      }, 800);
+      // Redirect smoothly to WhatsApp
+      setTimeout(() => {
+        window.location.href = waUrl;
+      }, 500);
 
       return false;
     }
